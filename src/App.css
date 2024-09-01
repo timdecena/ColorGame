@@ -1,38 +1,55 @@
+/* src/App.css */
 .App {
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.color-sequence {
+  margin-bottom: 90px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(3, 6fr);
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reset-button {
+  margin-top: 20px;
+  padding: 15px 30px; /* Increased padding for a bigger button */
+  background-color: #28a745; /* Green background color */
+  border: 1px solid #28a745; /* Matching border color */
+  color: white; /* White text color for better contrast */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.reset-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* src/Tile.css */
+.tile {
+  width: 500px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #f0f0f0; /* Light background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for both transform and shadow */
+}
+
+.tile:hover {
+  transform: scale(1.05); /* Slightly enlarge the tile on hover */
+  box-shadow: 0 4px 20px rgba(0, 255, 0, 0.7); /* Glow effect with green color */
+}
+
+.tile:hover {
+  transform: scale(1.1);
 }
